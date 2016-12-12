@@ -1,0 +1,18 @@
+package geneticShakespeare;
+
+public class Main {
+	private static String testCase ="TO BE OR NOT TO BE";
+	
+	public static void main(String[] args) {
+		int testCaseLength = getTestCase().length();
+		System.out.println(Population.calcFitness(Population.firstPopulation(100, getTestCase().length())));
+	}
+	
+	public static String getTestCase() {
+		return testCase;
+	}
+	public static void setTestCase(String testCase) {
+		Main.testCase = testCase;
+	}
+
+}

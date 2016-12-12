@@ -1,0 +1,22 @@
+package geneticShakespeare;
+
+import java.util.concurrent.ThreadLocalRandom;
+
+public class Population {
+	public static void firstPopulation(int PopCount, int testCaseLength){
+		StringBuilder[] population = new StringBuilder[testCaseLength];
+		for (int i = 0; i < PopCount; i++){
+			for (int j = 0; j < testCaseLength; j++){
+				int random = ThreadLocalRandom.current().nextInt(65, 92);
+				population[i] = population[i];
+				if (random == 91){					
+					random = 32;
+				}
+				population[5] = population[5].append("test");
+			}
+		}
+		for (int j = 0; j < population.length; j++){
+			System.out.println(population[j]);
+		}
+	}
+}

@@ -1,0 +1,28 @@
+package geneticShakespeare;
+
+import java.util.ArrayList;
+
+public class Main {
+	private static String testCase ="TO BE OR NOT TO BE";
+	
+	public static void main(String[] args) {
+		ArrayList<String> runningPopulation = new ArrayList();
+		int populationCount = 10;
+		
+		String[] populationArray = new String[populationCount];
+		populationArray = Population.firstPopulation(populationCount, getTestCase().length()).clone();
+		
+		runningPopulation = CreateUnit.Mutate(CreateUnit.genMatingPool(populationArray));
+		for(String unit: runningPopulation){
+			System.out.println(unit);
+		}
+	}
+	
+	public static String getTestCase() {
+		return testCase;
+	}
+	public static void setTestCase(String testCase) {
+		Main.testCase = testCase;
+	}
+
+}

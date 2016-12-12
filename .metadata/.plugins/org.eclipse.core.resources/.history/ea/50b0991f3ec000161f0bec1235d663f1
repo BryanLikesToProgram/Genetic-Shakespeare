@@ -1,0 +1,23 @@
+package geneticShakespeare;
+
+public class Main {
+	private static String testCase ="TO BE OR NOT TO BE";
+	
+	public static void main(String[] args) {
+		int populationCount = 3;
+		String[] populationArray = new String[populationCount];
+		populationArray = Population.firstPopulation(3, getTestCase().length()).clone();
+		
+		for(int i = 0; i < populationCount; i++){
+			System.out.println(Population.calcFitness(populationArray[i]));
+		}
+	}
+	
+	public static String getTestCase() {
+		return testCase;
+	}
+	public static void setTestCase(String testCase) {
+		Main.testCase = testCase;
+	}
+
+}

@@ -1,0 +1,24 @@
+package geneticShakespeare;
+
+import java.util.ArrayList;
+
+public class Main {
+	private static String testCase ="TO BE OR NOT TO BE";
+	
+	public static void main(String[] args) {
+		ArrayList<String> runningPopulation = new ArrayList<String>();
+		int populationCount = 200;
+		
+		String[] populationArray = new String[populationCount];
+		populationArray = Population.firstPopulation(populationCount, getTestCase().length()).clone();
+		
+	}
+	
+	public static String getTestCase() {
+		return testCase;
+	}
+	public static void setTestCase(String testCase) {
+		Main.testCase = testCase;
+	}
+
+}

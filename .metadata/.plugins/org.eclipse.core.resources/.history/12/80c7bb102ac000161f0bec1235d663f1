@@ -1,0 +1,10 @@
+package geneticShakespeare;
+
+public class Main {
+
+	public static void main(String[] args) {
+		StringBuilder testCase = new StringBuilder("TO BE OR NOT TO BE");
+		Population.firstPopulation(100, testCase.length());
+	}
+
+}

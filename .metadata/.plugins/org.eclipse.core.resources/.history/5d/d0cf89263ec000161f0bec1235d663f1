@@ -1,0 +1,22 @@
+package geneticShakespeare;
+
+public class Main {
+	private static String testCase ="TO BE OR NOT TO BE";
+	
+	public static void main(String[] args) {
+		int populationCount = 3;
+		
+		String[] populationArray = new String[populationCount];
+		populationArray = Population.firstPopulation(3, getTestCase().length()).clone();
+		
+		CreateUnit.genMatingPool(populationArray);
+	}
+	
+	public static String getTestCase() {
+		return testCase;
+	}
+	public static void setTestCase(String testCase) {
+		Main.testCase = testCase;
+	}
+
+}
